@@ -3169,9 +3169,9 @@ function submitPromptResponse() {
 async function callDataForSEO(endpoint, payload, retries=1) {
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      const resp = await fetch('https://api.dataforseo.com/v3/' + endpoint, {
+      const resp = await fetch('https://dfs-proxy.labnsn.com/v3/' + endpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': 'Basic ' + DFS_AUTH },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
       if (!resp.ok) throw new Error('DataForSEO HTTP ' + resp.status);
