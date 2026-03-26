@@ -2865,7 +2865,7 @@ function escapeHTML(str) {
 }
 
 // ==================== API: SETTINGS ====================
-const DFS_AUTH = 'eWFubkBub3J0aC1zdGFyLm5ldHdvcms6dWN5WXdqa1BGRFJ1V2loZw==';
+const DFS_AUTH = localStorage.getItem('seorefresh_dfs_auth') || '';
 const GEMINI_DEFAULT_KEY = 'AIzaSyCum5H5moOCDMt7ppvIX5g2WnR3VAxGLws';
 
 const LLM_PROVIDERS = {
