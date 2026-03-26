@@ -2866,12 +2866,12 @@ function escapeHTML(str) {
 
 // ==================== API: SETTINGS ====================
 const DFS_AUTH = localStorage.getItem('seorefresh_dfs_auth') || '';
-const GEMINI_DEFAULT_KEY = 'AIzaSyCum5H5moOCDMt7ppvIX5g2WnR3VAxGLws';
+const GEMINI_DEFAULT_KEY = '';
 
 const LLM_PROVIDERS = {
   gemini:   { name: 'Gemini (Google)',   icon: '✨', endpoint: 'gemini',
               models: [{id:'gemini-2.5-flash',label:'Gemini 2.5 Flash (rapide)'},{id:'gemini-2.5-pro',label:'Gemini 2.5 Pro (puissant)'},{id:'gemini-2.0-flash',label:'Gemini 2.0 Flash (éco)'}],
-              defaultModel:'gemini-2.5-flash', placeholder:'AIzaSy...', link:'https://aistudio.google.com/apikey', linkLabel:'aistudio.google.com', defaultKey: GEMINI_DEFAULT_KEY },
+              defaultModel:'gemini-2.5-flash', placeholder:'AIzaSy...', link:'https://aistudio.google.com/apikey', linkLabel:'aistudio.google.com' },
   claude:   { name: 'Claude (Anthropic)', icon: '☁️', endpoint: 'claude',
               models: [{id:'claude-sonnet-4-6',label:'Claude Sonnet 4.6'},{id:'claude-opus-4-6',label:'Claude Opus 4.6 (meilleur)'},{id:'claude-haiku-4-5-20251001',label:'Claude Haiku 4.5 (rapide)'}],
               defaultModel:'claude-sonnet-4-6', placeholder:'sk-ant-api03-...', link:'https://console.anthropic.com', linkLabel:'console.anthropic.com' },
